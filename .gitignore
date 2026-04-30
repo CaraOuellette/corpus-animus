@@ -9,6 +9,7 @@
 !embodied_clusters_expanded.py
 !extract_sharegpt_ultrachat_assistant_messages.py
 !extract_wildchat_assistant_messages.py
+!objects.py
 !italic_lines.py
 !prepare_chat_dataset_samples.py
 !tests/
