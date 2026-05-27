@@ -2,6 +2,7 @@
 !.gitignore
 !README.md
 !requirements.txt
+!DATASETS.md
 !corpus.py
 !detect_correction_frames.py
 !detect_correction_frames_export.py
