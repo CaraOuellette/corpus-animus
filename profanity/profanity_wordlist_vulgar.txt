@@ -1,0 +1,114 @@
+# Curated vulgar-expletives subset of LDNOOBW.
+# Source: profanity_wordlist.txt (LDNOOBW English snapshot,
+#   commit 5faf2ba42d7b1c0977169ec3611df25a3c08eb13).
+# Curated: 2026-05-20.
+#
+# Curation rule: KEEP terms whose dominant register in modern English is
+# vulgar expletive, strong slur, scatological, or sexually-vulgar shorthand.
+# DROP terms whose dominant register is clinical, anatomical, topical, or
+# identity-descriptive. Motivated by the locked LDNOOBW returning ~90% false
+# positives on PRISM-alignment, whose prompt distribution skews toward
+# LGBTQ+/abortion/sex-education topics where clinical/topical sexual
+# vocabulary appears in legitimate discussion.
+#
+# Slurs are kept (vulgar register in a corpus-analysis sense), with the
+# exception of Scunthorpe-prone slurs ("coon"/"coons" - Maine Coon cat
+# breed) and terms whose primary referent in chat data is historical/topical
+# discussion ("negro", "neonazi", "swastika", "white power", "tight white").
+#
+# Format identical to profanity_wordlist.txt: one entry per line, blank
+# lines and `#`-prefix comments skipped by load_wordlist(). Whole-word,
+# case-insensitive matching applied at scan time.
+#
+# Dropped categories (total dropped from source: 350 of 403):
+#   - Clinical sexual ("sex", "sexual", "intercourse", "rape", "incest",
+#     "pedophile", "masturbation", "orgasm", "ejaculation", ...)
+#   - Anatomical ("anal", "vagina", "penis", "clitoris", "anus", "rectum",
+#     "nipple", "breast", "vulva", "scrotum", ...)
+#   - Identity descriptors ("homosexual", "bisexual", "transgender",
+#     "lesbian", "gay", "shemale", "tranny", ...)
+#   - Kink / topic descriptors ("bondage", "bdsm", "fetish", "milf",
+#     "hardcore", "dominatrix", "femdom", ...)
+#   - Pornography topic words ("porn", "pornography", "nude", "nudity",
+#     "erotic", "hentai", "nsfw", "xxx", ...)
+#   - Scunthorpe-prone ("tit"/"tits"/"titties", "boob"/"boobs", "coon",
+#     "negro", "octopussy" [film title], "octopussy", "spunk" [Brit. spirit],
+#     "fuck buttons" [band], ...)
+#   - Brand/site/phrase noise ("bangbros", "playboy", "viagra", "cialis",
+#     "how to kill", "how to murder", ...)
+#   - Specific acts described clinically ("fellatio", "cunnilingus",
+#     "blowjob", "handjob", "anilingus", "sodomy", "rimjob", ...)
+#
+# Borderline calls explicitly logged:
+#   - "darkie": kept (slur, dominant register is racial epithet)
+#   - "mong": DROPPED after empirical check. Whole-word matches Tagalog
+#     particle "mong" (e.g. "Maaari mong itanong" = "you can ask") in
+#     multilingual PRISM data. Cross-language Scunthorpe.
+#   - "spastic": kept (UK ableist slur; not Scunthorpe-prone in this data)
+#   - "nutten": kept (German-loan slur for prostitute; obscure but present
+#     in LDNOOBW and unambiguously vulgar in usage)
+#   - "honkey": kept (racial slur, vulgar register)
+#   - "nig nog": kept (slur)
+#   - "god damn": kept (LDNOOBW carries the two-word form; the single-word
+#     "goddamn" is not in the source so cannot be added)
+#   - "poof": kept (homophobic slur in British English)
+#   - "hooker": kept (vulgar shorthand for prostitute per task brief)
+#   - "tosser": kept (UK expletive)
+#   - "dick": DROPPED after empirical check on PRISM. 11 whole-word matches
+#     in this dataset; 10 of 11 are proper-noun references (Philip K. Dick,
+#     Moby-Dick, Dick Leitsch). Dominant register in this corpus is the
+#     surname/title trap, not the expletive. If used as an expletive here,
+#     it's almost always written "dickhead"/"dickish" which would need
+#     prefix matching anyway.
+#
+arsehole
+ass
+asshole
+assmunch
+bastard
+bastardo
+beaner
+beaners
+bitch
+bitches
+bollocks
+bullshit
+clusterfuck
+cunt
+darkie
+fag
+faggot
+fuck
+fuckin
+fucking
+fucktards
+god damn
+honkey
+hooker
+jigaboo
+jiggaboo
+jiggerboo
+kike
+motherfucker
+nigga
+nigger
+nig nog
+nutten
+paki
+piece of shit
+pikey
+poof
+raghead
+shit
+shitty
+slanteye
+slut
+spastic
+spic
+tosser
+towelhead
+twat
+wank
+wetback
+whore
+🖕
