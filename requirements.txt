@@ -1,1 +1,3 @@
 pyarrow
+datasets
+huggingface_hub

@@ -1,38 +1,41 @@
-*
-!.gitignore
-!README.md
-!requirements.txt
-!DATASETS.md
-!corpus.py
-!detect_correction_frames.py
-!detect_correction_frames_export.py
-!download_datasets.py
-!embodied_clusters.py
-!embodied_clusters_expanded.py
-!extract_sharegpt_ultrachat_assistant_messages.py
-!extract_wildchat_assistant_messages.py
-!objects.py
-!italic_lines.py
-!italic-lines-prevalence.md
-!prepare_chat_dataset_samples.py
-!tests/
-tests/*
-!tests/test_corpus.py
-!tests/test_detect_correction_frames.py
-!tests/test_detect_correction_frames_export.py
-!tests/test_embodied_clusters_expanded.py
-!tests/test_extract_sharegpt_ultrachat_assistant_messages.py
-!tests/test_extract_wildchat_assistant_messages.py
-!profanity/
-profanity/*
-!profanity/README.md
-!profanity/methodology.md
-!profanity/phase_a_prism.md
-!profanity/expressive_profanity.py
-!profanity/profanity_first.py
-!profanity/profanity_wordlist.txt
-!profanity/profanity_wordlist_vulgar.txt
-!profanity/tests/
-profanity/tests/*
-!profanity/tests/test_expressive_profanity.py
-!profanity/tests/test_profanity_first.py
+# Source is tracked by default; this file ignores data, caches, and outputs.
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+
+# Tooling caches
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+
+# macOS
+.DS_Store
+
+# Downloaded corpora (see download_datasets.py / README.md)
+/WildChat-1M/
+/WildChat-4.8M-Full/
+/UltraChat/
+/ShareGPT_Vicuna_unfiltered_raw/
+/lmsys-chat-1m/
+/chatbot_arena_conversations/
+/arena-human-preference-140k/
+/prism-alignment/
+
+# Personal exports
+/conversations.json
+/chat.html
+
+# Generated extracts, detections, and run outputs
+*.sqlite
+*.arrow
+*.parquet
+*.jsonl
+*_assistant_messages_profile.json
+*_correction_frames_summary.json
+/runs/
+/_test_outputs/
